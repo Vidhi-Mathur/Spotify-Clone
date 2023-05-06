@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+body{
+    background-color: rgb(26, 24, 24);
+}
+
+.fa {
+    font-size: 24px;
+  }
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+ font-family: 'Ubuntu', sans-serif;
+ color: white;
+}
+
+nav ul li{
+    padding: 0 12px;
+}
+
+/*ul inside navigation bar*/
+nav ul{  
+    display: flex;              /*horizontally display navbar items*/
+    list-style-type: none;
+    height: 55px;
+    background-color: black;
+    align-items: center;
+}
+
+/*  Adjusting Spotify Logo*/
+.brand img{        
+    width: 55px;
+    padding: 0 8px;
+}
+
+.brand{
+    display: flex;          /*Display 'Spotify' horizontally*/
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+.container{         
+    min-height: 70vh;       /*To move song Length bar to bottom*/
+    background-color: rgb(83, 80, 80);
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    display: flex;
+    width: 70%;
+    margin: 20px auto;     /* To put at centre */
+    border-radius: 15px;   /*Round edges of border*/
+    padding: 15px;         /*Around album*/
+    /* background-image: url('/Spotify/Covers/album\ cover.jpg'); */
+    background-image: url('/Covers/album\ cover.jpg');
+}
+
+.songLengthBar{
+    position: sticky;
+    height: 120px;
+    background-color: black;
+    display: flex;  /*To move song length to centre, display, justify content and align items set*/
+    justify-content: center;
+    align-items: center;
+    color: white; /*Set icon colour to white, below song length*/
+    flex-direction: column; 
+}
+
+#mySongLengthBar{  /*Song Length*/
+    width: 80vw;
+    cursor: pointer;
+}
+
+.icons{
+    margin-top: 14px;   /*Add margin to icons below song length*/
+}
+
+.icons i{
+    cursor: pointer;   /*Switches cursor to pointer when moved over icons*/
+    margin: 0 7px 0 0;  /*Add space to play icons*/
+}
+
+.songItemContainer{     /*div that contains song Items*/
+        margin-top: 70px;
+}
+
+.songItem{
+    height: 70px;
+    width: 200%;
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+}
+
+.songItem img{
+    width: 60px;
+    margin: 0 24px;
+    border-radius: 5px;
+}
+
+.songPlaying{
+    position: absolute;
+    left: 15vw;
+}
+
+.songPlaying img{
+    opacity: 0;
+    transition: opacity 0.5s ease-in;    /*GIF doesn't keep playing all the time*/
+}
+
+.timeStamp{
+    margin: 0 24px;
+}
